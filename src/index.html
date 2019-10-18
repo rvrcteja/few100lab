@@ -4,15 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <h1>Front End Web 100 Starter</h1>
-        <h2>Progressive ITU</h2>
+        <h1 class="header">Tip Calculator</h1>
     </header>
-    <main>
-        
+    <main class="container">
+        <div class="input-group mb-3 dollar-amount">
+            <div class="input-group-prepend">
+                <span class="input-group-text"
+                      id="basic-addon1">$</span>
+            </div>
+            <input type="number"
+                   id="dollar-amount"
+                   class="form-control"
+                   aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+
+        <div class="btn-group"
+             role="group"
+             aria-label="Basic example">
+            <button id="button-10"
+                    type="button"
+                    class="btn btn-secondary"
+                    data-value="10">10%</button>
+            <button id="button-15"
+                    type="button"
+                    class="btn btn-secondary"
+                    data-value="15">15%</button>
+            <button id="button-20"
+                    type="button"
+                    class="btn btn-secondary"
+                    disabled=true
+                    data-value="20">20%</button>
+        </div>
+        <span> Enter Custom Tip Amount</span>
+        <input type="number"
+               id="tip-other-amount"
+               class="form-control">
+        <div id="tip-subtext"
+             class="sub-text">You are tipping 20%</div>
+
+        <ul class="list-group">
+            <li id="bill-amount"
+                class="list-group-item">Bill Amount: </li>
+            <li id="tip-perc"
+                class="list-group-item">Tip Percentage: 20%</li>
+            <li id="tip-amount"
+                class="list-group-item">Amount of tip: $20.00</li>
+            <li id="total-amount"
+                class="list-group-item">Total to be paid: $120.00</li>
+        </ul>
     </main>
 </body>
 
